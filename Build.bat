@@ -1,0 +1,1 @@
+pyinstaller -F -w -i AccoutingSystem.ico AccoutingSystem.py
