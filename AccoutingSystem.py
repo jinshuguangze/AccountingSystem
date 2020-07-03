@@ -164,12 +164,12 @@ class AccoutingSystem(QMainWindow, Ui_mainWindows):
                             Cin[n] = Cin[n]+1
                         else:
                             Din[n] = Din[n]+1
-                        if(moneytotal1[shotin[j]].find('(') != -1):
+                        if(moneytotal3[shotin[j]].find('(') != -1):
                             secTotal[n] = secTotal[n] + \
-                                float(moneytotal1[shotin[j]].split('(')[0])
+                                float(moneytotal3[shotin[j]].split('(')[0])
                         else:
                             secTotal[n] = secTotal[n] + \
-                                float(moneytotal1[shotin[j]])
+                                float(moneytotal3[shotin[j]])
 
                     for j in range(0, len(shotout)):
                         if(attribute[shotout[j]] == 'A'):
@@ -180,12 +180,6 @@ class AccoutingSystem(QMainWindow, Ui_mainWindows):
                             Cout[n] = Cout[n]+1
                         else:
                             Dout[n] = Dout[n]+1
-                        if(moneytotal2[shotout[j]].find('(') != -1):
-                            secTotal[n] = secTotal[n] + \
-                                float(moneytotal2[shotout[j]].split('(')[0])
-                        else:
-                            secTotal[n] = secTotal[n] + \
-                                float(moneytotal2[shotout[j]])
 
                 dfos1 = pd.DataFrame({'支局名称': list(map(str, inNameList))})
                 dfos2 = pd.DataFrame({'核发总金额': list(map(str, secTotal))})
